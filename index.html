@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Automation System — Showcase Django</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+
+  <!-- Showcase Topbar -->
+  <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+        <span class="font-semibold text-white">Contract Automation Platform</span>
+        <span class="text-xs bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">Django 5 + python-docx</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Enybyy/contract-automation-system" target="_blank" class="text-slate-300 hover:text-white flex items-center gap-1.5 transition">
+          <i class="fa-brands fa-github"></i> <span>Ver Repositorio</span>
+        </a>
+        <a href="https://www.linkedin.com/in/eliud-rm/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition text-xs">
+          <i class="fa-brands fa-linkedin"></i> <span>Contactar a Eliud RM</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto w-full px-4 pt-8 pb-4 text-center">
+    <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-3 py-1 rounded-full text-xs font-medium mb-3">
+      <i class="fa-solid fa-file-contract"></i> Automatización de Flujos Legales & RRHH
+    </div>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+      Generador Masivo de Contratos con Django
+    </h1>
+    <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+      Mapea plantillas Word (.docx) con bases de datos Excel (.xlsx) para emitir cientos de documentos legales personalizados en segundos con cero margen de error.
+    </p>
+  </section>
+
+  <main class="max-w-7xl mx-auto w-full px-4 py-6 flex-1 space-y-8">
+    
+    <!-- Flow Stepper -->
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">1</div>
+        <div>
+          <span class="text-xs text-slate-400 block">Paso 1: Plantilla Word</span>
+          <span class="text-sm font-semibold text-white">Detección de Placeholders</span>
+        </div>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">2</div>
+        <div>
+          <span class="text-xs text-slate-400 block">Paso 2: Excel Origen</span>
+          <span class="text-sm font-semibold text-white">Mapeo de Columnas</span>
+        </div>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">3</div>
+        <div>
+          <span class="text-xs text-slate-400 block">Paso 3: Emisión Masiva</span>
+          <span class="text-sm font-semibold text-white">Descarga de Contratos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Workspace -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Config Column -->
+      <div class="lg:col-span-6 space-y-6">
+        
+        <!-- Template Inspector -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-file-word text-blue-400"></i> Plantilla Activa: <span class="text-emerald-400 font-mono text-sm">Contrato_Locacion.docx</span>
+            </h2>
+            <span class="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Django Model: PlantillaContrato</span>
+          </div>
+
+          <p class="text-xs text-slate-400 mb-3">Placeholders detectados automáticamente en el documento mediante regex & python-docx:</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs px-2.5 py-1 rounded font-mono">{{NOMBRE_COMPLETO}}</span>
+            <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs px-2.5 py-1 rounded font-mono">{{DNI}}</span>
+            <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs px-2.5 py-1 rounded font-mono">{{CARGO}}</span>
+            <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs px-2.5 py-1 rounded font-mono">{{HONORARIOS}}</span>
+            <span class="bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs px-2.5 py-1 rounded font-mono">{{FECHA_INICIO}}</span>
+          </div>
+
+          <!-- Mapping Matrix -->
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <h3 class="text-xs font-bold text-slate-300 uppercase mb-3 flex items-center gap-1.5">
+              <i class="fa-solid fa-link text-sky-400"></i> Mapeo con Columnas de Excel (FuenteDeDatos)
+            </h3>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between items-center py-1 border-b border-slate-900">
+                <span class="font-mono text-emerald-400">{{NOMBRE_COMPLETO}}</span>
+                <i class="fa-solid fa-arrow-right text-slate-600"></i>
+                <span class="font-mono text-slate-300 bg-slate-800 px-2 py-0.5 rounded">Columna: "Nombres y Apellidos"</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-900">
+                <span class="font-mono text-emerald-400">{{HONORARIOS}}</span>
+                <i class="fa-solid fa-arrow-right text-slate-600"></i>
+                <span class="font-mono text-slate-300 bg-slate-800 px-2 py-0.5 rounded">Columna: "Monto Mensual (S/)"</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="font-mono text-emerald-400">{{CARGO}}</span>
+                <i class="fa-solid fa-arrow-right text-slate-600"></i>
+                <span class="font-mono text-slate-300 bg-slate-800 px-2 py-0.5 rounded">Columna: "Puesto Contratado"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <button id="btn-generate" onclick="simularGeneracion()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Generar 3 Contratos Personalizados en Lote</span>
+        </button>
+      </div>
+
+      <!-- Right Preview Column (Generated Document) -->
+      <div class="lg:col-span-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <span class="text-xs text-emerald-400 font-bold uppercase">Previsualización de Documento Emitido</span>
+              <h3 class="text-sm font-bold text-white">Contrato_001_Carlos_Quispe.docx</h3>
+            </div>
+            <span id="gen-badge" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs px-2.5 py-1 rounded-full font-medium">
+              <i class="fa-solid fa-check"></i> Listo para descarga
+            </span>
+          </div>
+
+          <!-- Document Sheet Paper Simulation -->
+          <div class="bg-white text-slate-900 rounded-lg p-8 font-serif shadow-inner border border-slate-300 text-xs leading-relaxed space-y-4 max-h-[500px] overflow-y-auto">
+            <h4 class="text-center font-bold text-sm tracking-wider uppercase underline pb-2">CONTRATO DE LOCACIÓN DE SERVICIOS</h4>
+            <p>Conste por el presente documento el <strong>CONTRATO DE LOCACIÓN DE SERVICIOS</strong> que celebran de una parte <strong>EMPRESA SERVICIOS GENERALES S.A.C.</strong>, y de otra parte el/la señor(a):</p>
+            
+            <div class="bg-slate-50 border-l-4 border-emerald-600 p-3 rounded font-sans text-xs space-y-1">
+              <p><strong>Nombres y Apellidos:</strong> <span id="doc-nombre" class="text-emerald-700 font-semibold">CARLOS EDUARDO QUISPE GÓMEZ</span></p>
+              <p><strong>Documento de Identidad (DNI):</strong> <span id="doc-dni" class="text-emerald-700 font-semibold">40918273</span></p>
+              <p><strong>Cargo / Especialidad:</strong> <span id="doc-cargo" class="text-emerald-700 font-semibold">ESPECIALISTA SENIOR EN ANÁLISIS DE DATOS</span></p>
+              <p><strong>Retribución Económica:</strong> <span id="doc-monto" class="text-emerald-700 font-semibold">S/ 4,500.00 SOLES MENSUALES</span></p>
+            </div>
+
+            <p><strong>CLÁUSULA PRIMERA (OBJETO):</strong> EL LOCADOR prestará sus servicios de manera autónoma, realizando labores de asesoría técnica y desarrollo tecnológico conforme a los requerimientos pactados.</p>
+            <p><strong>CLÁUSULA SEGUNDA (PLAZO):</strong> El presente contrato rige desde el <strong>01 de Octubre de 2026</strong> hasta la culminación del servicio.</p>
+            
+            <div class="pt-8 flex justify-around text-center font-sans text-[10px] text-slate-500">
+              <div class="border-t border-slate-400 w-36 pt-1">LA EMPRESA</div>
+              <div class="border-t border-slate-400 w-36 pt-1">EL LOCADOR</div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex justify-between items-center text-xs">
+            <span class="text-slate-400 font-mono">Tiempo de compilación: 0.08 s</span>
+            <button class="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-download"></i> Descargar ZIP con Contratos (.docx)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 border-t border-slate-800 text-center py-4 text-xs text-slate-500">
+    Desarrollado por <a href="https://github.com/Enybyy" class="text-emerald-400 hover:underline">Eliud RM</a> — Soluciones de Software & Automatización Freelance
+  </footer>
+
+  <script>
+    function simularGeneracion() {
+      const btn = document.getElementById('btn-generate');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generando documentos con Django...';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> ¡3 Contratos Generados con Éxito!';
+        btn.className = "w-full bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2";
+      }, 700);
+    }
+  </script>
+</body>
+</html>
