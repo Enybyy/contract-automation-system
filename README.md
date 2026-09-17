@@ -5,7 +5,7 @@
   <a href="https://enybyy.github.io/contract-automation-system/" target="_blank">
     <img src="https://img.shields.io/badge/▶️_PROBAR_DEMO_EN_VIVO-GitHub_Pages-22c55e?style=for-the-badge&logo=github&logoColor=white" alt="Demo en Vivo" />
   </a>
-  <a href="https://www.linkedin.com/in/eliud-rm/" target="_blank">
+  <a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Eliud_RM-0284c7?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </p>
@@ -70,6 +70,6 @@ En despachos legales, empresas inmobiliarias, departamentos de Recursos Humanos 
 
 Desarrollo **plataformas web personalizadas en Django, sistemas SaaS para automatización de documentos y portales internos a medida**.
 
-- **LinkedIn**: [Eliud RM](https://www.linkedin.com/in/eliud-rm/)
+- **LinkedIn**: [Eliud RM](https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/)
 - **GitHub**: [@Enybyy](https://github.com/Enybyy)
 - *Escríbeme para evaluar cómo automatizar los procesos documentales de tu negocio.*
