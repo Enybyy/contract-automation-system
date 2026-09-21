@@ -1,3 +1,22 @@
+## 🇬🇧 English Summary
+
+**Generate hundreds of Word contracts automatically from an Excel database.**
+
+**The problem:** contracts were produced one by one, manually copying client data from a spreadsheet into Word templates — hours of repetitive work every week, with constant typos in names, amounts and dates.
+
+**The solution:** a Django platform that maps Word (`.docx`) templates against an Excel database and generates the entire batch in a single run, preserving the template's original formatting, styles and layout.
+
+**Impact:** a task that took hours of manual copy-paste now runs in one click, with zero transcription errors.
+
+**Stack:** Python · Django · python-docx · openpyxl · Pandas
+
+🔗 **[Live demo](https://enybyy.github.io/contract-automation-system/)**
+
+---
+
+<details>
+<summary>📖 <b>Documentación completa en español</b> (click para expandir)</summary>
+
 # 📄 Contract Automation System — Generador Masivo de Contratos con Django
 > **Plataforma web empresarial para la generación masiva y automatizada de contratos legales y comerciales, combinando plantillas Word (.docx) con bases de datos Excel.**
 
@@ -73,3 +92,6 @@ Desarrollo **plataformas web personalizadas en Django, sistemas SaaS para automa
 - **LinkedIn**: [Eliud RM](https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/)
 - **GitHub**: [@Enybyy](https://github.com/Enybyy)
 - *Escríbeme para evaluar cómo automatizar los procesos documentales de tu negocio.*
+
+
+</details>
